@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/assets_navbar/css/Navbar-Right-Links.css">
+    <link rel="stylesheet" href="static/assets_navbar/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md py-3" style="height: 50px;">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"><img src="static/assets_navbar/img/clipboard-image.png" style="transform: scale(0.26);"></span><span>Rak Academy Clinic</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-2">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"></li>
+                </ul><button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal-1" style="background: rgba(13,110,253,0);color: rgb(141,141,141);border-color: rgba(141,141,141,0);">Log out</button>
+                <a href="{{ url_for('Inventory') }}" class="btn btn-primary ms-md-2" type="submit" style="background: rgb(0,0,0); border-color: black;">Inventory</a>
+                <a href="{{ url_for('Home') }}" class="btn btn-primary ms-md-2" type="submit" style="background: rgb(46,121,163);">Medical Log</a>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Logout</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure?</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">No</button>
+                    <form action="{{ url_for('Redirect_Login') }}"> <button class="btn btn-primary" type="submit">Yes</button></form></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/assets_navbar/js/Open_Modal.js"></script>
+<br>
+{% block content %}{% endblock %}
+</body>
+
+</html>

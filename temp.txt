@@ -1,0 +1,41 @@
+['L1', '2443952', 'Pedro', '', '', '', '', '', 'rtc', 'None', '', 'None', 'None', 'None',
+'L2', '2004482', 'Bob', '13.13', '13.20', 'AUU', 'FFAF', '36.5', 'home', 'info', 'Panadol', 'None', 'None', 'None',
+'L3', '2004482', 'Bob', '13.13', '13.20', 'AUU', 'FFAF', '36.5', 'home', 'info', 'Panadol', 'None', 'None', 'None',
+'L4', '2004482', 'Bob', '13.13', '13.20', 'AUU', 'FFAF', '36.5', 'home', 'info', 'Panadol', 'None', 'None', 'None',
+'L5', '2004482', 'Bob', '12', '31', 'RERER', 'aSA', '34', 'Sent to class', 'No', 'FAS', 'None', 'None', 'None',
+'L6', '2443952', 'Pedro', 'e', 'e', ' e', 'e', 'e', 'Sent to class', 'No', 'e', 'None', 'None', 'None',
+'L7', '2303103', 'Muhhamad Jamal Abdelrahman bil faiyah', '08:38', '9:02', 'He ate 300g of peanuts', 'Called an ambulance', ' reassured', ' used ice', '36.7', 'Sent home', 'Yes', 'Some pills idk', 'None', 'None', 'None',
+'L8', '2443952', 'Pedro', '', '', '', '', '', 'Sent to class', 'No', '', 'None', 'None', 'None',
+'L9', '2004482', 'Bob', '14', '16', 'scscs', 'sfdsf', '23', 'Sent to class', 'Yes', 'aer', 'None', 'None', 'None',
+'L10', '2443952', 'Pedro', '', '', '', '', '', 'Sent to class', 'No', '', 'None', 'None', 'None',
+'L11', '2443952', 'Pedro', '', '', '', '', '', 'Sent to class', 'No', '', 'None', 'None', 'None',
+'L12', '2443952', 'Pedro', '', '', '', '', '', 'Sent to class', 'No', '', 'None', 'None', 'None',
+'L13', '2004482', 'Bob', '', '', '', '', '', 'Sent to class', 'No', '', 'None', 'None', 'None',
+'L14', '2443952', 'Pedro', '', '', '', '', '', 'Sent to class', 'No', '', 'None', 'None', 'None',
+'L15', '2443952', 'Pedro', 'How', 'Low', 'Hello', 'Hello', 'Hello', 'Sent to class', 'Yes', 'How low', 'None', 'None', 'None',
+'L16', '2443952', 'Pedro', 'How', 'Low', 'Hello???', 'Hello', 'Hallo', 'Sent to class', 'Yes', 'How low', 'None', 'None', 'None',
+'L17', '2443952', 'Pedro', '13:10', '12:50', 'aolsnd', 'gefoenfre', '36', 'Sent home', 'Yes', 'DKSQM', 'None', 'None', 'None',
+'L18', '2004482', 'Bob', '', '', 'AF', ';DF;F', 'S;', 'DF Ads', '', 'Sent to class', 'No', '', 'None', 'None', '2022-08-11',
+'L19', '2801447', 'Petar Petrovski', '', '', '', '', '', 'Yes', 'No', '', 'None', 'None', '2022-08-11',
+'L20', '2303103', 'Muhhamad Jamal Abdelrahman bil faiyah', '', '', '', '', '', 'Yes', 'No', '', 'None', 'None', '2022-08-11',
+'L21', '2456014', 'Osman Osmani', '', '', '', '', '', 'Yes', 'No', '', 'None', 'None', '2022-08-11',
+'L23', '2303103', 'Muhhamad Jamal Abdelrahman bil faiyah', '13.20', '13.25', 'Go boli glava', 'Mu dadov mraz', '36.6', 'Yes', 'No', 'Lek za glava', 'None', 'None', '2022-08-12',
+'L24', '2303103', 'Muhhamad Jamal Abdelrahman bil faiyah', '', '', 'died', 'buried', '124', 'No', 'Yes', '', 'None', 'None', '2022-08-12',
+'L25', '2456014', 'Osman Osmani', '', '', 'died also idk', 'buried', '', 'No', 'Yes', '', 'None', 'None', '2022-08-12',
+'L26', '2443952', 'Pedro', 'hiiighwaayy', 'to hell', 'Im on the ', 'hiiighwayyy to hell', 'dum', 'Yes', 'Yes', 'dum dum dum', 'None', 'None', '2022-08-14',
+'L27', '2303103', 'Muhhamad Jamal Abdelrahman bil faiyah', '2334', '34', 'pkojfdssd', 'fwefe', '34', 'Yes', 'No', 'wsd', 'None', 'None', '2022-08-14',
+'L28', '2303103', 'Muhhamad Jamal Abdelrahman bil faiyah', '13', '14', 'SPDKfjdskl', 'sdlkfjd', '36', 'No', 'Yes', 'SDLKmfs', 'None', 'None', '2022-08-20']
+
+
+
+
+('L17', '2443952', '13:10', '12:50', 'aolsnd', 'gefoenfre', '36', 'Sent home', 'Yes', 'DKSQM', None, None, None)
+('L17', '2443952', '13:10', '12:50', 'aolsnd', 'gefoenfre', 36, 'Sent home', 'Yes', 'DKSQM', None, None, None)
+
+
+('L1', 2443952, '', '', '', '', '', 'rtc', None, '', None, None, None)
+('L1', '2443952', '', '', '', '', '', 'rtc', None, '', None, None, None)
+
+
+('L23', '2303103', '13.20', '13.25', 'Go boli glava', 'Mu dadov mraz', '36.6', 'Yes', 'No', 'Lek za glava', None, None, '2022-08-12') ||||
+('L22', '', '', '', '', '', '', 'Yes', 'No', '', None, None, '2022-08-11')

@@ -1,0 +1,162 @@
+{% extends 'Base_Template.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Inventory</title>
+
+    <style>
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+    </style>
+
+    <script>
+        function MyFunction() {
+            //declaring variables
+  var filter, table, tr, i, j;
+
+  //gets data from the search input
+  filter = document.getElementById("search").value.toLowerCase();
+
+  //gets table itself
+  table = document.getElementById("table");
+
+  //gets each individual row
+  tr = table.getElementsByTagName("tr");
+
+  //loops through all the rows
+  for (i = 1; i < tr.length; i++) {
+    tr[i].style.display = "none";
+
+    //gets each individual cell
+    const tdArray = tr[i].getElementsByTagName("td");
+
+    //loops through all the cells
+    for (j = 0; j < tdArray.length; j++) {
+      const cellValue = tdArray[j];
+
+        //if the cell value contains the search value, display the row
+      if (cellValue && cellValue.innerHTML.toLowerCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+        break;
+      }
+    }
+  }
+}
+
+function apply() {
+    /*convert the table into 2d array
+             */
+    var table = document.getElementById("table");
+    var rows = table.getElementsByTagName("tr");
+    var array = [];
+
+    for (var i = 0; i < rows.length; i++) {
+        var row = rows[i];
+        var cols = row.getElementsByTagName("td")
+
+        //if the value of the column is /n then change it to something like "None"
+        for (var j = 0; j < cols.length; j++) {
+            if (cols[j].innerHTML == "\n") {
+                cols[j].innerHTML = "None";
+            }
+        }
+            var arraydata = [];
+            for (var j = 0; j < cols.length; j++) {
+                var col = cols[j];
+                console.log(cols[j].innerHTML);
+                arraydata.push(col.innerHTML);
+            }
+            array.push(arraydata);
+        }
+        /*put the array in the list textbox*/
+        var list = document.getElementById("list");
+        list.value = JSON.stringify(array);
+
+}
+
+    </script>
+</head>
+
+<body>
+<form action="{{ url_for('apply_table') }}" method="post">
+<label class="form-label" style="margin-left: 17px;">Search:<br><input type="text" autocomplete="off" onkeyup="MyFunction()" id="search"></label>
+    <button class="btn btn-primary" onclick="apply()" type="submit" style="margin-left: 17px;">Apply</button>
+<div class="dropdown">
+  <button disabled="disabled" class="btn btn-primary" style="background-color: green; border: none; height: 38px;">Tables</button>
+  <div class="dropdown-content">
+    <a href="{{ url_for('Log_table') }}">Medical Log</a>
+    <a href="{{ url_for('Inventory') }}">Inventory</a>
+  </div>
+</div>
+<a href="{{ url_for('add_record',table_name=table_name) }}" class="btn btn-primary" type="button" style="margin-left: 17px; border-color: black; background-color: black;">Add record</a>
+
+<input type="hidden" name="list" id="list">
+    <input type="hidden" name="table_name" id="tname" value="{{ table_name }}">
+    <div class="table-responsive">
+        <table id="table" class="table">
+            <thead>
+                <tr>
+                    {% for a in column %}
+                    <th>{{ a }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+
+            {% for i in table %}
+            <tr contenteditable="true">
+                {% for j in i %}
+                   <!--if the index of j is 0 then make it contenteditable to false -->
+                    {% if loop.index0 == 0 %}
+                        <td contenteditable="false">{{ j }}</td>
+                        {% else %}
+                        <td>{{ j }}</td>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+            {% endfor %}
+
+
+            </tbody>
+        </table>
+    </div>
+</form>
+</body>
+
+</html>
+{% endblock %}
