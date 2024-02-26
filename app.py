@@ -5,7 +5,6 @@ import sqlite3, bcrypt,datetime,simplejson as json, smtplib
 
 #defining functions for encryption
 
-pwd="I wanna yeet my laptop across my desk"
 def hash(password):
     pwd_hash = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
     return pwd_hash
